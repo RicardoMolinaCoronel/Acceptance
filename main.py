@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 
 class Task:
     def __init__(self, name, description, status="Incomplete"):
@@ -28,8 +23,9 @@ class ToDoListManager:
             print('Tasks:')
             output+='Tasks:'
             for index, task in enumerate(self.tasks, start=1):
-                output += f'{index}. Name: {task.name}, Description: {task.description}, Status: {task.status}'
-                print(f'{index}. Name: {task.name}, Description: {task.description}, Status: {task.status}')
+                salidaTask=f'{index}. Name: {task.name}, Description: {task.description}, Status: {task.status}'
+                output += salidaTask
+                print(salidaTask)
         return output
     def mark_complete(self, task_index):
         if 1 <= task_index <= len(self.tasks):
@@ -99,4 +95,3 @@ if __name__ == "__main__":
         else:
             print('Invalid choice. Please enter a number between 1 and 5.')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
